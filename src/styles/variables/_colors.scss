@@ -1,0 +1,23 @@
+$light-theme: (
+  background: green,
+  text: #000000,
+  primary: #007bff,
+);
+
+$dark-theme: (
+  background: #000000,
+  text: #ffffff,
+  primary: #1e90ff,
+);
+
+@mixin theme($theme) {
+  --background: #{map-get($theme, background)};
+}
+
+body {
+  @include theme($light-theme);
+}
+
+body.dark-mode {
+  @include theme($dark-theme);
+}
