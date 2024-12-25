@@ -1,6 +1,4 @@
-@use './variables/breakpoints';
-@use './variables/fonts';
-@use './variables/spacings';
-@use './variables/colors';
-@use './normalize';
-@use './globals';
+@forward './variables/breakpoints';
+@forward './variables/fonts';
+@forward './variables/spacings';
+@forward './variables/colors';

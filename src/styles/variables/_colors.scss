@@ -1,23 +1,41 @@
+// Colors scheme
 $light-theme: (
-  background: green,
-  text: #000000,
-  primary: #007bff,
+  background: #fff,
+  primary-dark: #000000,
+  primary-grey: #6f7285,
+  primary-grey-light: #F9F9F9,
+  primary-purple-light: #f0edff,
+  primary-purple-dark: #6c4eff,
+  nav-link-hover: #1616400a,
+  secondary-grey: #ECF1F2,
+  secondary-dark: #24244F,
+  shade-black-berry: #16164029,
 );
 
 $dark-theme: (
   background: #000000,
-  text: #ffffff,
-  primary: #1e90ff,
+  primary-dark: #ffffff,
+  primary-grey: #6f7285,
+  primary-grey-light: #1A1A1A,
+  primary-purple-light: #f0edff,
+  primary-purple-dark: #6c4eff,
+  nav-link-hover: #ffffff1a,
+  secondary-grey: #ECF1F2,
+  secondary-dark: #24244F,
+  shade-black-berry: #16164029,
 );
 
 @mixin theme($theme) {
   --background: #{map-get($theme, background)};
-}
-
-body {
-  @include theme($light-theme);
-}
-
-body.dark-mode {
-  @include theme($dark-theme);
+  --transparent: rgba(0, 0, 0, 0);
+  --overlay: rgba(0, 0, 0, 0.5);
+  --primary-dark: #{map-get($theme, primary-dark)};
+  --primary-grey: #{map-get($theme, primary-grey)};
+  --nav-link-hover: #{map-get($theme, nav-link-hover)};
+  --primary-purple-light: #{map-get($theme, primary-purple-light)};
+  --primary-purple-dark: #{map-get($theme, primary-purple-dark)};
+  --secondary-grey: #{map-get($theme, secondary-grey)};
+  --secondary-dark: #{map-get($theme, secondary-dark)};
+  --primary-grey-light: #{map-get($theme, primary-grey-light)};
+  --shade-black-berry: #{map-get($theme, shade-black-berry)};
 }

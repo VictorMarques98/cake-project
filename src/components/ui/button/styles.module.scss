@@ -1,0 +1,36 @@
+@use '@/styles/main';
+
+.default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--transparent);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.primary {
+  @extend .default;
+}
+
+.secondary {
+  @extend .default;
+  border: solid 1px var(--shade-black-berry);
+}
+
+.small {
+}
+
+.medium {
+  width: main.$space-40;
+  height: main.$space-40;
+  border-radius: main.$space-96;
+}
+
+.large {
+}

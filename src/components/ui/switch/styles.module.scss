@@ -1,0 +1,30 @@
+@use '@/styles/main';
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: main.$space-2;
+  border: solid 1px var(--secondary-grey);
+  border-radius: main.$space-8;
+  max-width: max-content;
+  padding: main.$space-4;
+}
+
+.option {
+  font-size: main.$font-size-12;
+  line-height: main.$line-height-14;
+  padding: main.$space-8 main.$space-10;
+  border-radius: main.$space-5;
+  background-color: var(--transparent);
+  border: none;
+  color: var(--primary-grey);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.is_active,
+  &:hover {
+    background-color: var(--primary-grey-light);
+    color: var(--secondary-dark);
+    font-weight: main.$font-weight-semi-bold;
+  }
+}

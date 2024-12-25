@@ -15,9 +15,7 @@ export default function Home() {
 
   return (
     <div>
-      <button onClick={() => setIsDarkMode((prev) => !prev)}>
-        Change Theme
-      </button>
+      <h1>Main</h1>
     </div>
   )
 }

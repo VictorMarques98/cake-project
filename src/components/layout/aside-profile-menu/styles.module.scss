@@ -1,0 +1,18 @@
+@use '@/styles/main';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: main.$space-16;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: main.$space-8;
+  margin-bottom: main.$space-8;
+
+  & > h2 {
+    margin: 0;
+  }
+}

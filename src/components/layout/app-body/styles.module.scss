@@ -1,0 +1,40 @@
+@use '@/styles/main';
+
+.body {
+  display: grid;
+  height: 100dvh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: main.$space-10;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'Header Header'
+    'Body Body';
+
+  & > header {
+    grid-area: Header;
+  }
+
+  & > main {
+    grid-area: Body;
+  }
+
+  // @include breakpoint(medium) {
+  //   grid-template-columns: repeat(3, 1fr);
+  //   grid-template-rows: repeat(2, 1fr);
+  //   grid-column-gap: 10px;
+  //   grid-row-gap: 10px;
+
+  //   & > header {
+  //     grid-area: 1 / 1 / 2 / 4;
+  //   }
+
+  //   & > aside {
+  //     grid-area: 2 / 1 / 3 / 2;
+  //   }
+
+  //   & > main {
+  //     grid-area: 2 / 2 / 3 / 4;
+  //   }
+  // }
+}

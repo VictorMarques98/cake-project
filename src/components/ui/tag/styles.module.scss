@@ -1,0 +1,18 @@
+@use '@/styles/main';
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: main.$space-6;
+  padding: main.$space-6 main.$space-8;
+  border-radius: main.$space-36;
+  font-weight: main.$font-weight-semi-bold;
+  font-size: main.$font-size-12;
+  max-width: max-content;
+
+  &.primary {
+    background-color: var(--primary-purple-light);
+    color: var(--primary-purple-dark);
+    line-height: main.$line-height-18;
+  }
+}

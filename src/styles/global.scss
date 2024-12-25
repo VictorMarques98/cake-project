@@ -1,0 +1,36 @@
+@use 'main';
+@use './normalize.scss';
+
+// Nextjs Error Portal
+nextjs-portal {
+  display: none;
+  position: absolute;
+}
+
+* {
+  user-select: none;
+}
+
+body {
+  @include main.theme(main.$light-theme);
+  background-color: var(--background);
+
+  &.dark-mode {
+    @include main.theme(main.$dark-theme);
+  }
+}
+
+//Custom classes
+.hide_on_desktop {
+  @include main.breakpoint('medium') {
+    display: none;
+  }
+}
+
+.hide_on_mobile {
+  display: none;
+
+  @include main.breakpoint('medium') {
+    display: block;
+  }
+}
