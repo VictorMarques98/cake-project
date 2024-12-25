@@ -43,3 +43,11 @@
     display: block;
   }
 }
+
+.aside,
+.overlay,
+.overlay.is_opened {
+  @include main.breakpoint('medium') {
+    display: none;
+  }
+}

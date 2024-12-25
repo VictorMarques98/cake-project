@@ -13,12 +13,15 @@ const inter = Inter({
 
 export default function RootLayout({ children }: ChildrenProps) {
   return (
-    <html lang='en' className={inter.className}>
+    <html
+      lang='en'
+      className={inter.className}
+    >
       <AppBody>
         <Header />
         <AsideMenu />
         <AsideProfileMenu />
-        <main style={{ backgroundColor: 'red' }}>
+        <main>
           {children}
         </main>
       </AppBody>

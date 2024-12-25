@@ -6,6 +6,7 @@
   gap: main.$space-16;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav_link {
@@ -31,5 +32,21 @@
   & svg {
     width: main.$font-size-20;
     height: main.$font-size-20;
+  }
+
+  @include main.breakpoint('medium') {
+    & > a {
+      font-size: main.$font-size-14;
+    }
+  }
+}
+
+.aside_desktop {
+  display: none;
+  border-right: solid 1px var(--shade-black-berry);
+  padding: main.$space-20 main.$space-16;
+
+  @include main.breakpoint('medium') {
+    display: inherit;
   }
 }

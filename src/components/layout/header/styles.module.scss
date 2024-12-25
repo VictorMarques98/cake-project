@@ -20,7 +20,7 @@
   justify-content: space-between;
   gap: main.$space-16;
   padding: main.$space-10 main.$space-20;
-  border: solid 5px black;
+  border-bottom: solid 1px var(--shade-black-berry);
 
   & > button:nth-child(1) {
     @extend .hide_on_desktop;
