@@ -1,3 +1,4 @@
+import { CardCalculator } from "@/app/home/_components/ui/card-calculator";
 import { CardLearning } from "@/app/home/_components/ui/card-learning";
 import { CardOverview } from "@/app/home/_components/ui/card-overview";
 import { Section } from "@/app/home/_components/ui/section"
@@ -17,6 +18,7 @@ export default function Home() {
       />
       <CardOverview />
       <CardLearning />
+      <CardCalculator />
     </Section>
   )
 }

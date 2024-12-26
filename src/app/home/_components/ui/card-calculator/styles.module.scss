@@ -1,0 +1,48 @@
+@use '@/styles/main';
+
+.card_calculator {
+  position: relative;
+  padding: main.$space-24;
+  width: 100%;
+  overflow: hidden;
+
+  & > img {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+
+  & > h2 {
+    font-size: main.$font-size-24;
+    font-weight: main.$font-weight-semi-bold;
+  }
+
+  & > p {
+    margin-top: main.$space-16;
+    max-width: 13.75rem;
+  }
+
+  @include main.breakpoint('medium') {
+    max-width: 25rem;
+  }
+}
+
+.button_calculator {
+  display: flex;
+  align-items: center;
+  gap: main.$space-8;
+  background: var(--transparent);
+  border: 0;
+  padding: main.$space-10 main.$space-16;
+  background-color: var(--primary-purple-dark);
+  color: var(--primary-grey-light);
+  border-radius: main.$space-96;
+  font-size: main.$font-size-14;
+  margin-top: main.$space-40;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
