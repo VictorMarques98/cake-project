@@ -14,12 +14,15 @@ type Props = {
 
 export const CarouselLearning = forwardRef<HTMLUListElement, Props>(({ cards }, ref) => {
   return (
-    <ul className={styles.carousel} ref={ref}>
+    <ul
+      className={styles.carousel}
+      ref={ref}
+    >
       {cards.map(({ category, title, duration, thumbnail }) => (
         <li key={title}>
           <button
             type="button"
-            onClick={() => {}}
+            onClick={() => { }}
             className={styles.card}
           >
             <div className={styles.carousel_thumbnail}>

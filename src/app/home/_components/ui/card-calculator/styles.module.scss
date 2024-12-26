@@ -22,9 +22,6 @@
     max-width: 13.75rem;
   }
 
-  @include main.breakpoint('medium') {
-    max-width: 25rem;
-  }
 }
 
 .button_calculator {

@@ -8,11 +8,12 @@ $light-theme: (
   primary-purple-light: #f0edff,
   primary-purple-dark: #6c4eff,
   primary-black-light: #1616400a,
+  primary-green: #e7ff6e,
   secondary-grey: #ecf1f2,
   secondary-dark: #24244f,
   shade-black-berry: #16164029,
   shade-green-light: #467e5214,
-  shade-black-berry-light: #1616408F,
+  shade-black-berry-light: #1616408f,
   shade-green: #467e52,
 );
 
@@ -25,10 +26,11 @@ $dark-theme: (
   primary-purple-light: #f0edff,
   primary-purple-dark: #6c4eff,
   primary-black-light: #ffffff1a,
+  primary-green: #e7ff6e,
   secondary-grey: #ecf1f2,
   secondary-dark: #24244f,
   shade-black-berry: #16164029,
-  shade-black-berry-light: #1616408F,
+  shade-black-berry-light: #1616408f,
   shade-green-light: #467e5214,
   shade-green: #467e52,
 );
@@ -50,4 +52,5 @@ $dark-theme: (
   --shade-green-light: #{map-get($theme, shade-green-light)};
   --shade-green: #{map-get($theme, shade-green)};
   --shade-black-berry-light: #{map-get($theme, shade-black-berry-light)};
+  --primary-green: #{map-get($theme, primary-green)};
 }

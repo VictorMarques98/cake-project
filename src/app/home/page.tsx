@@ -1,5 +1,6 @@
 import { CardCalculator } from "@/app/home/_components/ui/card-calculator";
 import { CardLearning } from "@/app/home/_components/ui/card-learning";
+import { CardMotivational } from "@/app/home/_components/ui/card-motivational";
 import { CardOverview } from "@/app/home/_components/ui/card-overview";
 import { Section } from "@/app/home/_components/ui/section"
 import { Text } from "@/components/ui/text"
@@ -19,6 +20,7 @@ export default function Home() {
       <CardOverview />
       <CardLearning />
       <CardCalculator />
+      <CardMotivational />
     </Section>
   )
 }
