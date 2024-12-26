@@ -1,0 +1,21 @@
+@use '@/styles/main';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  & > h1 {
+    margin: main.$space-20;
+    text-align: center;
+  }
+
+  @include main.breakpoint('medium') {
+    max-width: 50.625rem;
+
+    & > h1 {
+      text-align: left;
+    }
+  }
+}

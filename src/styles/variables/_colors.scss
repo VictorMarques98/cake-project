@@ -1,6 +1,7 @@
 // Colors scheme
 $light-theme: (
   background: #fff,
+  primary-black: #18161A,
   primary-dark: #000000,
   primary-grey: #6f7285,
   primary-grey-light: #F9F9F9,
@@ -10,10 +11,13 @@ $light-theme: (
   secondary-grey: #ECF1F2,
   secondary-dark: #24244F,
   shade-black-berry: #16164029,
+  shade-green-light: #467E5214,
+  shade-green: #467E52,
 );
 
 $dark-theme: (
   background: #000000,
+  primary-black: #18161A,
   primary-dark: #ffffff,
   primary-grey: #6f7285,
   primary-grey-light: #1A1A1A,
@@ -23,6 +27,8 @@ $dark-theme: (
   secondary-grey: #ECF1F2,
   secondary-dark: #24244F,
   shade-black-berry: #16164029,
+  shade-green-light: #467E5214,
+  shade-green: #467E52,
 );
 
 @mixin theme($theme) {
@@ -38,4 +44,7 @@ $dark-theme: (
   --secondary-dark: #{map-get($theme, secondary-dark)};
   --primary-grey-light: #{map-get($theme, primary-grey-light)};
   --shade-black-berry: #{map-get($theme, shade-black-berry)};
+  --primary-black: #{map-get($theme, primary-black)};
+  --shade-green-light: #{map-get($theme, shade-green-light)};
+  --shade-green: #{map-get($theme, shade-green)};
 }

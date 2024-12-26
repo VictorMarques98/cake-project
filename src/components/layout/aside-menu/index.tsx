@@ -7,6 +7,7 @@ import { Icon } from '@/components/icons'
 import { usePathname } from 'next/navigation'
 import { Aside as AsideMenuMobile } from '@/components/ui/aside'
 import { useAsideMenu, useAsideMenuActions } from '@/store/layout'
+import clsx from 'clsx';
 
 function Navigation() {
   const pathname = usePathname();
@@ -17,10 +18,10 @@ function Navigation() {
         {routes.map(({ href, icon, label }) => (
           <li
             key={label}
-            className={[
+            className={clsx(
               styles.nav_link,
               pathname === href ? styles.is_active : ''
-            ].join(' ')}
+            )}
           >
             <Link href={href}>
               <Icon name={icon} />

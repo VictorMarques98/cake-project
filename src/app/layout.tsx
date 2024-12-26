@@ -1,5 +1,5 @@
 import '@/styles/global.scss'
-import { AppBody } from '@/components/layout/app-body'
+import { AppBody } from '@/components/ui/app-body'
 import { ChildrenProps } from '@/types/react'
 import { Header } from '@/components/layout/header'
 import { AsideMenu } from '@/components/layout/aside-menu'

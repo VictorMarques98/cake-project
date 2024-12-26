@@ -20,6 +20,7 @@ export function Tag({ icon, text, color, className, ...props }: Props) {
         colorMap[color],
         className
       ].join(' ')}
+      {...props}
     >
       {icon}
       <span>{text}</span>

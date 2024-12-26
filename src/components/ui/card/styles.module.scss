@@ -1,0 +1,20 @@
+@use '@/styles/main';
+
+.card {
+  padding: main.$space-16;
+  border: solid 1px var(--shade-black-berry);
+  border-radius: main.$space-20;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  gap: main.$space-8;
+  width: 100%;
+}
+
+.card_header_action {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}

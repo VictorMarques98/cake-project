@@ -30,8 +30,8 @@
   }
 
   & svg {
-    width: main.$font-size-20;
-    height: main.$font-size-20;
+    width: main.$font-size-18;
+    height: main.$font-size-18;
   }
 
   @include main.breakpoint('medium') {

@@ -1,0 +1,36 @@
+@use '@/styles/main';
+
+.default {
+  margin: 0;
+}
+
+.h1 {
+  @extend .default;
+
+  font-size: main.$font-size-32;
+  font-weight: main.$font-weight-semi-bold;
+  line-height: main.$line-height-40;
+  letter-spacing: -1px;
+  color: var(--primary-black);
+}
+
+.h2 {
+  @extend .default;
+
+  font-size: main.$font-size-18;
+  line-height: main.$line-height-28;
+  font-weight: main.$font-weight-semi-bold;
+  color: var(--primary-black);
+}
+
+.span {
+  @extend .default;
+
+  font-size: main.$font-size-14;
+  font-weight: main.$font-weight-regular;
+  color: var(--primary-grey);
+}
+
+.h3 {
+  @extend .default;
+}

@@ -1,0 +1,60 @@
+@use '@/styles/main';
+
+.dropdown {
+  position: relative;
+  z-index: 1000;
+}
+
+.dropdown_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: main.$space-6;
+  padding: main.$space-6 main.$space-12;
+  font-size: main.$font-size-12;
+  font-weight: main.$font-weight-semi-bold;
+  border: 1px solid var(--shade-black-berry);
+  border-radius: main.$space-20;
+  color: var(--primary-black);
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+  background-color: var(--transparent);
+
+  &:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: main.$space-6;
+  border: 1px solid var(--shade-black-berry);
+  border-radius: main.$space-8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  list-style: none;
+  padding: main.$space-8 0;
+  width: 9.375rem;
+  background-color: var(--background);
+
+  & > li > button {
+    padding: main.$space-8 main.$space-16;
+    color: var(--primary-black);
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease;
+    font-size: main.$font-size-12;
+    background-color: var(--transparent);
+    border: none;
+    width: 100%;
+    text-align: left;
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-purple-light);
+    }
+  }
+}

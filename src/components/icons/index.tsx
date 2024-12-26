@@ -5,6 +5,8 @@ import { SvgTag } from './tag'
 import { SvgWallet } from './wallet'
 import { SvgLock } from './lock'
 import { SvgQuestion } from './question'
+import { SvgCaretDown } from './caret-down'
+import { SvgArrowUp } from './arrow-up'
 
 type Props = {
   name: string;
@@ -18,6 +20,8 @@ const iconMap: { [key: string]: React.FC } = {
   'wallet': SvgWallet,
   'lock': SvgLock,
   'question': SvgQuestion,
+  'caret-down': SvgCaretDown,
+  'arrow-up': SvgArrowUp,
 };
 
 export function Icon({ name, ...props }: Props) {

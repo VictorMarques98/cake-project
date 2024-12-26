@@ -9,10 +9,15 @@
   font-weight: main.$font-weight-semi-bold;
   font-size: main.$font-size-12;
   max-width: max-content;
+}
 
-  &.primary {
-    background-color: var(--primary-purple-light);
-    color: var(--primary-purple-dark);
-    line-height: main.$line-height-18;
-  }
+.primary {
+  background-color: var(--primary-purple-light);
+  color: var(--primary-purple-dark);
+  line-height: main.$line-height-18;
+}
+
+.secondary {
+  background-color: var(--shade-green-light);
+  color: var(--shade-green);
 }
