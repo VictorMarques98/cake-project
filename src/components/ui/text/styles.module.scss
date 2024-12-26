@@ -1,12 +1,17 @@
 @use '@/styles/main';
 
-.default {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.span,
+.p {
   margin: 0;
 }
 
 .h1 {
-  @extend .default;
-
   font-size: main.$font-size-32;
   font-weight: main.$font-weight-semi-bold;
   line-height: main.$line-height-40;
@@ -15,8 +20,6 @@
 }
 
 .h2 {
-  @extend .default;
-
   font-size: main.$font-size-18;
   line-height: main.$line-height-28;
   font-weight: main.$font-weight-semi-bold;
@@ -24,13 +27,11 @@
 }
 
 .span {
-  @extend .default;
-
   font-size: main.$font-size-14;
   font-weight: main.$font-weight-regular;
   color: var(--primary-grey);
 }
 
-.h3 {
-  @extend .default;
+.p {
+  color: var(--primary-black);
 }

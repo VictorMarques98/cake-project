@@ -1,40 +1,24 @@
 @use '@/styles/main';
 
-.icon {
-  background-color: var(--primary-purple-dark);
-  font-size: main.$font-size-18;
-  padding: main.$space-10;
-  border-radius: main.$space-96;
-  width: 2.75rem;
-  height: 2.75rem;
+.navigation_control {
+  display: flex;
+  align-items: center;
+  gap: main.$space-4;
+}
+
+.navigation_control_button {
+  padding: main.$space-6 main.$space-12;
+  margin: 0;
+  background-color: var(--transparent);
+  border: none;
+  color: var(--primary-black);
+  font-size: main.$font-size-12;
+  font-weight: main.$font-weight-semi-bold;
+  cursor: pointer;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   gap: main.$space-16;
-
-  @include main.breakpoint('large') {
-    flex-direction: row;
-  }
-}
-
-.card_left_side {
-  width: 100%;
-}
-
-.card_details {
-  & > div {
-    display: flex;
-    align-items: center;
-    gap: main.$space-12;
-    margin: main.$space-32 0 main.$space-4;
-  }
-
-  & > h3 {
-    font-size: main.$font-size-48;
-    font-weight: main.$font-weight-semi-bold;
-    color: var(--primary-black);
-    margin-top: main.$space-4;
-  }
 }

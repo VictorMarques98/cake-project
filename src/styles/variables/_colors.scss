@@ -1,34 +1,36 @@
 // Colors scheme
 $light-theme: (
   background: #fff,
-  primary-black: #18161A,
+  primary-black: #18161a,
   primary-dark: #000000,
   primary-grey: #6f7285,
-  primary-grey-light: #F9F9F9,
+  primary-grey-light: #f9f9f9,
   primary-purple-light: #f0edff,
   primary-purple-dark: #6c4eff,
-  nav-link-hover: #1616400a,
-  secondary-grey: #ECF1F2,
-  secondary-dark: #24244F,
+  primary-black-light: #1616400a,
+  secondary-grey: #ecf1f2,
+  secondary-dark: #24244f,
   shade-black-berry: #16164029,
-  shade-green-light: #467E5214,
-  shade-green: #467E52,
+  shade-green-light: #467e5214,
+  shade-black-berry-light: #1616408F,
+  shade-green: #467e52,
 );
 
 $dark-theme: (
   background: #000000,
-  primary-black: #18161A,
+  primary-black: #18161a,
   primary-dark: #ffffff,
   primary-grey: #6f7285,
-  primary-grey-light: #1A1A1A,
+  primary-grey-light: #1a1a1a,
   primary-purple-light: #f0edff,
   primary-purple-dark: #6c4eff,
-  nav-link-hover: #ffffff1a,
-  secondary-grey: #ECF1F2,
-  secondary-dark: #24244F,
+  primary-black-light: #ffffff1a,
+  secondary-grey: #ecf1f2,
+  secondary-dark: #24244f,
   shade-black-berry: #16164029,
-  shade-green-light: #467E5214,
-  shade-green: #467E52,
+  shade-black-berry-light: #1616408F,
+  shade-green-light: #467e5214,
+  shade-green: #467e52,
 );
 
 @mixin theme($theme) {
@@ -37,7 +39,7 @@ $dark-theme: (
   --overlay: rgba(0, 0, 0, 0.5);
   --primary-dark: #{map-get($theme, primary-dark)};
   --primary-grey: #{map-get($theme, primary-grey)};
-  --nav-link-hover: #{map-get($theme, nav-link-hover)};
+  --primary-black-light: #{map-get($theme, primary-black-light)};
   --primary-purple-light: #{map-get($theme, primary-purple-light)};
   --primary-purple-dark: #{map-get($theme, primary-purple-dark)};
   --secondary-grey: #{map-get($theme, secondary-grey)};
@@ -47,4 +49,5 @@ $dark-theme: (
   --primary-black: #{map-get($theme, primary-black)};
   --shade-green-light: #{map-get($theme, shade-green-light)};
   --shade-green: #{map-get($theme, shade-green)};
+  --shade-black-berry-light: #{map-get($theme, shade-black-berry-light)};
 }

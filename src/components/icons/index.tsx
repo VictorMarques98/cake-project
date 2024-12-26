@@ -7,6 +7,8 @@ import { SvgLock } from './lock'
 import { SvgQuestion } from './question'
 import { SvgCaretDown } from './caret-down'
 import { SvgArrowUp } from './arrow-up'
+import { SvgArrowLeft } from './arrow-left'
+import { SvgArrowRight } from '@/components/icons/arrow-right'
 
 type Props = {
   name: string;
@@ -22,6 +24,8 @@ const iconMap: { [key: string]: React.FC } = {
   'question': SvgQuestion,
   'caret-down': SvgCaretDown,
   'arrow-up': SvgArrowUp,
+  'arrow-left': SvgArrowLeft,
+  'arrow-right': SvgArrowRight,
 };
 
 export function Icon({ name, ...props }: Props) {

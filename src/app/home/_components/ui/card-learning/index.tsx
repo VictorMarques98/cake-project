@@ -1,76 +1,98 @@
 "use client"
 
 import styles from './styles.module.scss'
-import { useState } from 'react'
+import { useRef } from 'react'
 import { Card, CardHeader } from '@/components/ui/card'
-import { DropDown } from '@/components/ui/dropdown'
-import { Tag } from '@/components/ui/tag'
+import { CarouselLearning } from '@/app/home/_components/ui/carousel-learning'
+import { Button } from '@/components/ui/button'
 import { Icon } from '@/components/icons'
-import { Text } from '@/components/ui/text'
-import { GaugeChart } from '@/app/home/_components/ui/chart-gauge'
 
-const options = [
+const learningCards = [
   {
-    value: 'Total',
-    label: 'Total'
+    category: "Investment",
+    title: "Types of options and how they works",
+    duration: "2:02",
+    thumbnail: "/images/learning_card.webp"
   },
   {
-    value: 'Today',
-    label: 'Today'
+    category: "Investment",
+    title: "Types of options and how they works",
+    duration: "2:02",
+    thumbnail: "/images/learning_card.webp"
   },
   {
-    value: 'Yesterday',
-    label: 'Yesterday'
+    category: "Investment",
+    title: "Types of options and how they works",
+    duration: "2:02",
+    thumbnail: "/images/learning_card.webp"
   }
 ];
 
-function HeaderIcon() {
+type NavigationControlProps = {
+  onPrevious: () => void;
+  onNext: () => void;
+  onSeeAll: () => void;
+}
+
+function NavigationControl({ onPrevious, onNext, onSeeAll }: NavigationControlProps) {
   return (
-    <div className={styles.icon}>
-      🍰
+    <div className={styles.navigation_control}>
+      <button
+        type="button"
+        className={styles.navigation_control_button}
+        onClick={onSeeAll}
+      >
+        See all
+      </button>
+      <Button
+        variant='secondary'
+        size='small'
+        onClick={onPrevious}
+      >
+        <Icon name='arrow-left' />
+      </Button>
+      <Button
+        variant='secondary'
+        size='small'
+        onClick={onNext}
+      >
+        <Icon name='arrow-right' />
+      </Button>
     </div>
   )
 }
 
 export function CardLearning() {
-  const [currentValue, setCurrentValue] = useState<string>('Total');
+  const carouselRef = useRef<HTMLUListElement>(null);
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  };
 
   return (
-    <Card
-      className={styles.card}
-    >
-      <div className={styles.card_left_side}>
-        <CardHeader
-          icon={<HeaderIcon />}
-          title="My cake value"
-          action={
-            <DropDown
-              currentValue={currentValue}
-              options={options}
-              onChange={(value) => setCurrentValue(value)}
-            />
-          }
-        />
-        <div className={styles.card_details}>
-          <div>
-            <Tag
-              icon={<Icon name="arrow-up" />}
-              color='secondary'
-              text='3%'
-            />
-            <Text
-              content={currentValue}
-              type="span"
-
-            />
-          </div>
-          <Text
-            content="$2,888,000"
-            type="h3"
+    <Card className={styles.card}>
+      <CardHeader
+        title="Learning"
+        action={
+          <NavigationControl
+            onPrevious={scrollLeft}
+            onNext={scrollRight}
+            onSeeAll={() => console.log('See all')}
           />
-        </div>
-      </div>
-      <GaugeChart />
+        }
+      />
+      <CarouselLearning
+        cards={learningCards}
+        ref={carouselRef}
+      />
     </Card>
   )
 }

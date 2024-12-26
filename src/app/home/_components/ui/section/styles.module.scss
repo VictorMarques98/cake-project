@@ -3,11 +3,12 @@
 .section {
   display: flex;
   flex-direction: column;
+  gap: main.$space-16;
   height: 100%;
   width: 100%;
 
   & > h1 {
-    margin: main.$space-20;
+    margin-top: main.$space-16;
     text-align: center;
   }
 

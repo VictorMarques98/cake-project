@@ -1,4 +1,5 @@
 import { CardLearning } from "@/app/home/_components/ui/card-learning";
+import { CardOverview } from "@/app/home/_components/ui/card-overview";
 import { Section } from "@/app/home/_components/ui/section"
 import { Text } from "@/components/ui/text"
 
@@ -14,6 +15,7 @@ export default function Home() {
         type="h1"
         content="Dashboard Overview"
       />
+      <CardOverview />
       <CardLearning />
     </Section>
   )
