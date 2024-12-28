@@ -1,6 +1,7 @@
 @use '@/styles/main';
 
 .section {
+  border: solid 1px red;
   padding: main.$space-16 0;
   height: 100%;
   width: 100%;
@@ -46,7 +47,8 @@
   }
 
   @include main.breakpoint('large') {
-    max-width: 50.625rem;
+    max-width: max-content;
+    max-height: 50rem;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(4, auto);
     grid-template-areas:

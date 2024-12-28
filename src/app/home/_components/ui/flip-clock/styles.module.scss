@@ -1,0 +1,15 @@
+@use '@/styles/main';
+
+.flip_clock {
+  --fcc-background: var(--primary-black-light);
+  --fcc-label-color: var(--primary-black);
+  --fcc-digit-color: var(--primary-black);
+  --fcc-digit-font-size: 3rem;
+  --fcc-label-font-size: 0.875rem;
+  --fcc-label-color: var(--primary-grey);
+  --fcc-spacing: .875rem;
+
+  & > div:nth-child(7) {
+    display: none;
+  }
+}

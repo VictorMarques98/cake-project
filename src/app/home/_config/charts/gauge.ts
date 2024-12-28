@@ -1,4 +1,6 @@
-export const option = {
+import { EChartsCoreOption } from "echarts";
+
+export const option: EChartsCoreOption = {
   grid: {
     show: true,
     top: 0,

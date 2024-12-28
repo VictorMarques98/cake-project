@@ -7,7 +7,8 @@ import { DropDown } from '@/components/ui/dropdown'
 import { Tag } from '@/components/ui/tag'
 import { Icon } from '@/components/icons'
 import { Text } from '@/components/ui/text'
-import { GaugeChart } from '@/app/home/_components/ui/chart-gauge'
+import { Chart } from '@/app/home/_components/ui/chart'
+import { option as gaugeChartConfig } from '@/app/home/_config/charts/gauge'
 
 const options = [
   {
@@ -70,7 +71,12 @@ export function CardOverview() {
           />
         </div>
       </div>
-      <GaugeChart />
+      <div className={styles.chart_container}>
+        <Chart
+          option={gaugeChartConfig}
+          className={styles.chart}
+        />
+      </div>
     </Card>
   )
 }

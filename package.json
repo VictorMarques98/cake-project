@@ -10,6 +10,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@leenguyen/react-flip-clock-countdown": "^1.6.0",
     "clsx": "^2.1.1",
     "echarts": "^5.5.1",
     "next": "15.1.2",

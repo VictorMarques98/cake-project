@@ -1,7 +1,8 @@
-import { CardCalculator } from "@/app/home/_components/ui/card-calculator";
-import { CardLearning } from "@/app/home/_components/ui/card-learning";
-import { CardMotivational } from "@/app/home/_components/ui/card-motivational";
-import { CardOverview } from "@/app/home/_components/ui/card-overview";
+import { CardCalculator } from "@/app/home/_components/ui/cards/card-calculator";
+import { CardLearning } from "@/app/home/_components/ui/cards/card-learning";
+import { CardMotivational } from "@/app/home/_components/ui/cards/card-motivational";
+import { CardOverview } from "@/app/home/_components/ui/cards/card-overview";
+import { CardVesting } from "@/app/home/_components/ui/cards/card-vesting";
 import { Section } from "@/app/home/_components/ui/section"
 import { Text } from "@/components/ui/text"
 
@@ -21,6 +22,7 @@ export default function Home() {
       <CardLearning />
       <CardCalculator />
       <CardMotivational />
+      <CardVesting />
     </Section>
   )
 }

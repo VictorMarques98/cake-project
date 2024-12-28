@@ -1,0 +1,75 @@
+@use '@/styles/main';
+
+.card_vesting {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: main.$space-16;
+
+  @include main.breakpoint('medium') {
+    min-width: 21.25rem;
+  }
+}
+
+.card_vesting_overview {
+  display: flex;
+  flex-direction: column;
+  gap: main.$space-66;
+  background-color: var(--primary-black-light);
+  border-radius: main.$space-20;
+  padding: main.$space-12;
+}
+
+.card_vesting_check {
+  display: flex;
+  align-items: center;
+  gap: main.$space-20;
+}
+
+.description {
+  margin: 0;
+  font-size: main.$font-size-14;
+  color: var(--primary-grey);
+
+  & > strong {
+    color: var(--primary-black);
+  }
+}
+
+.card_vesting_details {
+  & > * {
+    display: inline;
+  }
+
+  & > h3 {
+    font-size: main.$font-size-48;
+    font-weight: main.$font-weight-semi-bold;
+    line-height: main.$line-height-56;
+  }
+
+  & > span {
+    font-size: main.$font-size-18;
+    line-height: main.$line-height-28;
+  }
+}
+
+.card_vesting_counter {
+  display: flex;
+  flex-direction: column;
+  gap: main.$space-16;
+}
+
+.spacer {
+  background-color: var(--shade-black-berry);
+  height: 0.0625rem;
+}
+
+.chart_container {
+  height: 15rem;
+  min-width: 18.875rem;
+}
+
+.chart {
+  height: 100%;
+  width: 100%;
+}

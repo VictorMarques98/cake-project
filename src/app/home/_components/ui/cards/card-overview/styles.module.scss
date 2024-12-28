@@ -38,3 +38,21 @@
     margin-top: main.$space-4;
   }
 }
+
+.chart_container {
+  height: 12.5rem;
+  overflow-y: hidden;
+  background-color: var(--primary-purple-light);
+  border-radius: main.$space-20;
+  min-width: 23.625rem;
+}
+
+.chart {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 19.375rem;
+  width: 100%;
+}
+

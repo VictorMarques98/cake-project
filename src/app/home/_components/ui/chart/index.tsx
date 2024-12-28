@@ -1,9 +1,12 @@
-import styles from './styles.module.scss'
 import { useEffect, useRef } from 'react'
 import * as echarts from "echarts"
-import { option } from '@/app/home/_config/charts/gauge'
 
-export function GaugeChart() {
+type Props = {
+  option: echarts.EChartsCoreOption;
+  className?: string;
+}
+
+export function Chart({ option, className }: Props) {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -25,12 +28,10 @@ export function GaugeChart() {
   }, [chartRef]);
 
   return (
-    <div className={styles.container}>
-      <div
-        ref={chartRef}
-        className={styles.chart}
-      />
-    </div>
+    <div
+      ref={chartRef}
+      className={className}
+    />
   );
 }
 
