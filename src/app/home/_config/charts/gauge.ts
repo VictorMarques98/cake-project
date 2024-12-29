@@ -2,7 +2,6 @@ import { EChartsCoreOption } from "echarts";
 
 export const option: EChartsCoreOption = {
   grid: {
-    show: true,
     top: 0,
     bottom: 0,
     left: 0,

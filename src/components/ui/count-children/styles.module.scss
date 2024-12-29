@@ -1,0 +1,12 @@
+@use '@/styles/main';
+
+.child_counter {
+  position: fixed;
+  border-radius: main.$space-96;
+  padding: main.$space-8 main.$space-24;
+  right: main.$space-10;
+  top: main.$space-70;
+  background-color: #f9f9f9;
+  z-index: 3;
+  box-shadow: 0px main.$space-4 main.$space-6 rgba(0, 0, 0, 0.1);
+}

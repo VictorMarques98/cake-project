@@ -1,7 +1,6 @@
 @use '@/styles/main';
 
 .section {
-  border: solid 1px red;
   padding: main.$space-16 0;
   height: 100%;
   width: 100%;
@@ -9,7 +8,7 @@
   display: grid;
   gap: main.$space-16;
   grid-template-columns: 1fr;
-  grid-template-rows: auto repeat(5, auto);
+  grid-template-rows: main.$space-48 repeat(5, auto);
   grid-template-areas:
     'Title'
     'Overview'
@@ -21,7 +20,7 @@
   & > h1 {
     display: flex;
     align-items: center;
-    height: 48px;
+    height: main.$space-48;
     justify-content: center;
     grid-area: Title;
   }
@@ -47,10 +46,9 @@
   }
 
   @include main.breakpoint('large') {
-    max-width: max-content;
-    max-height: 50rem;
+    max-height: 49.375rem;
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: main.$space-48 repeat(3, auto);
     grid-template-areas:
       'Title Title Title'
       'Overview Overview Vesting'
