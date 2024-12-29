@@ -27,7 +27,7 @@ export function SvgLock(props: React.SVGProps<SVGSVGElement>) {
         ry={48}
         style={{
           fill: "none",
-          stroke: "#000",
+          stroke: "currentColor",
           strokeLinecap: "round",
           strokeLinejoin: "round",
           strokeWidth: 32,

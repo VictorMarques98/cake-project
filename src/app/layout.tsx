@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header'
 import { AsideMenu } from '@/components/layout/aside-menu'
 import { Inter } from 'next/font/google';
 import { AsideProfileMenu } from '@/components/layout/aside-profile-menu'
+import { AppProviders } from '@/providers'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,14 +18,16 @@ export default function RootLayout({ children }: ChildrenProps) {
       lang='en'
       className={inter.className}
     >
-      <AppBody>
-        <Header />
-        <AsideMenu />
-        <AsideProfileMenu />
-        <main>
-          {children}
-        </main>
-      </AppBody>
+      <AppProviders>
+        <AppBody>
+          <Header />
+          <AsideMenu />
+          <AsideProfileMenu />
+          <main>
+            {children}
+          </main>
+        </AppBody>
+      </AppProviders>
     </html>
   )
 }

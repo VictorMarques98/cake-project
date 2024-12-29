@@ -18,21 +18,21 @@ $light-theme: (
 );
 
 $dark-theme: (
-  background: #000000,
-  primary-black: #18161a,
+  background: #000,
+  primary-black: #e7e9e5,
   primary-dark: #ffffff,
-  primary-grey: #6f7285,
-  primary-grey-light: #1a1a1a,
-  primary-purple-light: #f0edff,
-  primary-purple-dark: #6c4eff,
-  primary-black-light: #ffffff1a,
-  primary-green: #e7ff6e,
+  primary-grey: #9090a0,
+  primary-grey-light: #484848,
+  primary-purple-light: #0f12ff,
+  primary-purple-dark: #93b100,
+  primary-black-light: #9f9f9ff5,
+  primary-green: #1800ff,
   secondary-grey: #ecf1f2,
-  secondary-dark: #24244f,
-  shade-black-berry: #16164029,
-  shade-black-berry-light: #1616408f,
-  shade-green-light: #467e5214,
-  shade-green: #467e52,
+  secondary-dark: #dbdbb0,
+  shade-black-berry: #e9e9b0d6,
+  shade-green-light: #b98181f1,
+  shade-black-berry-light: #e9e9b070,
+  shade-green: #f10c17,
 );
 
 @mixin theme($theme) {

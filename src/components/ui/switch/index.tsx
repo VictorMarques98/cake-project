@@ -1,6 +1,5 @@
 import styles from './styles.module.scss'
 import clsx from 'clsx'
-import { Button } from "@/components/ui/button"
 
 type Props = React.ButtonHTMLAttributes<HTMLDivElement> & {
   options: Array<{

@@ -3,7 +3,6 @@
 import styles from './styles.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import LogoWhite from '@/assets/images/logo-white.webp'
 import Avatar from '@/assets/images/avatar.webp'
 import { SvgHamburgerMenu } from '@/components/icons/hamburger-menu'
 import { Button } from '@/components/ui/button'
@@ -11,9 +10,12 @@ import { useAsideMenuActions } from '@/store/layout'
 import { Tag } from '@/components/ui/tag'
 import { Icon } from '@/components/icons'
 import { Switch } from '@/components/ui/switch'
+import { ToggleTheme } from '@/components/ui/toggle-theme'
+import { useTheme } from '@/hooks/useTheme'
 
 export function Header() {
   const { toggleAsideMenu, toggleAsideProfileMenu } = useAsideMenuActions();
+  const { isDarkMode } = useTheme();
 
   return (
     <header className={styles.header}>
@@ -30,8 +32,8 @@ export function Header() {
       </Button>
       <Link href='/'>
         <Image
-          src={LogoWhite}
-          alt='Logo Cake White'
+          src={isDarkMode ? "/images/logo-white.webp" : "/images/logo-dark.webp"}
+          alt='Logo Cake Dark'
           width={77}
           height={21}
         />
@@ -43,6 +45,7 @@ export function Header() {
         aria-label="Private access"
       />
       <span className={styles.spacer} />
+      <ToggleTheme />
       <Switch
         aria-label="Switch environment"
         options={[

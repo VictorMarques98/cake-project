@@ -22,13 +22,18 @@
   padding: main.$space-10 main.$space-20;
   border-bottom: solid 1px var(--shade-black-berry);
 
+  & > button svg {
+    color: var(--primary-black);
+  }
+
   & > button:nth-child(1) {
     @extend .hide_on_desktop;
   }
 
   & > div:nth-child(3),
   & > div:nth-child(4),
-  & > button:nth-child(6) {
+  & > button:nth-child(7),
+  & > label {
     @extend .hide_on_mobile;
   }
 

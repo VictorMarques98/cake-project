@@ -14,6 +14,11 @@
 }
 
 .nav_link {
+  & svg {
+    width: main.$font-size-18;
+    height: main.$font-size-18;
+  }
+
   & > a {
     display: flex;
     align-items: center;
@@ -31,11 +36,6 @@
   &.is_active > a {
     background-color: var(--primary-black-light);
     color: var(--primary-dark);
-  }
-
-  & svg {
-    width: main.$font-size-18;
-    height: main.$font-size-18;
   }
 
   @include main.breakpoint('medium') {

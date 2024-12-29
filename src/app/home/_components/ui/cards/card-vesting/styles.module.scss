@@ -29,16 +29,13 @@
 .description {
   margin: 0;
   font-size: main.$font-size-14;
-  color: var(--primary-grey);
-
-  & > strong {
-    color: var(--primary-black);
-  }
+  color: var(--primary-black);
 }
 
 .card_vesting_details {
   & > * {
     display: inline;
+    color: var(--primary-black);
   }
 
   & > h3 {

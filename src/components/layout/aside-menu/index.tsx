@@ -1,13 +1,13 @@
 "use client"
 
-import Link from 'next/link';
 import styles from './styles.module.scss'
+import Link from 'next/link'
 import { routes } from '@/constants/app'
 import { Icon } from '@/components/icons'
 import { usePathname } from 'next/navigation'
 import { Aside as AsideMenuMobile } from '@/components/ui/aside'
 import { useAsideMenu, useAsideMenuActions } from '@/store/layout'
-import clsx from 'clsx';
+import clsx from 'clsx'
 
 function Navigation() {
   const pathname = usePathname();

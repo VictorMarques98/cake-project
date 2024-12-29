@@ -2,6 +2,7 @@
 
 .edit_button {
   background-color: var(--primary-purple-light);
+  color: var(--primary-black);
 }
 
 .icon {
@@ -18,7 +19,7 @@
 
 .content {
   margin-top: main.$space-28;
-  
+
   & > h3 {
     font-size: main.$font-size-24;
     line-height: main.$line-height-32;

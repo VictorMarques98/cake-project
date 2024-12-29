@@ -8,6 +8,7 @@ import Avatar from '@/assets/images/avatar.webp'
 import { Tag } from '@/components/ui/tag'
 import { Icon } from '@/components/icons'
 import { Switch } from '@/components/ui/switch'
+import { ToggleTheme } from '@/components/ui/toggle-theme'
 
 export function AsideProfileMenu() {
   const isSideMenuOpened = useAsideProfileMenu();
@@ -37,6 +38,7 @@ export function AsideProfileMenu() {
           text="Private access"
           aria-label="Private access"
         />
+        <ToggleTheme />
         <Switch
           aria-label="Switch environment"
           options={[

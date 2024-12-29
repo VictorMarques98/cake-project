@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   gap: main.$space-4;
+
+  & > button {
+    color: var(--primary-black);
+  }
 }
 
 .navigation_control_button {

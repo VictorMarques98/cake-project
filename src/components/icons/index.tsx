@@ -11,6 +11,8 @@ import { SvgArrowLeft } from './arrow-left'
 import { SvgArrowRight } from '@/components/icons/arrow-right'
 import { SvgCalculator } from '@/components/icons/calculator'
 import { SvgPen } from '@/components/icons/pen'
+import { SvgSun } from '@/components/icons/sun'
+import { SvgMoon } from '@/components/icons/moon'
 
 type Props = {
   name: string;
@@ -30,6 +32,8 @@ const iconMap: { [key: string]: React.FC } = {
   'arrow-right': SvgArrowRight,
   'calculator': SvgCalculator,
   'pen': SvgPen,
+  'sun': SvgSun,
+  'moon': SvgMoon
 };
 
 export function Icon({ name, ...props }: Props) {

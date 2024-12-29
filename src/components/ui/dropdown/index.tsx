@@ -15,11 +15,18 @@ export function DropDown({ currentValue, options, onChange }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const toggleDropdown = () => setIsOpen((prev) => !prev);
+  function toggleDropdown() {
+    setIsOpen((prev) => !prev);
+  }
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+  function handleChange(value: string) {
+    onChange(value);
+    setIsOpen(false);
+  }
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLButtonElement>) {
     if (e.key === 'Escape') setIsOpen(false);
-  };
+  }
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -58,7 +65,7 @@ export function DropDown({ currentValue, options, onChange }: Props) {
               role="menuitem"
               tabIndex={0}
             >
-              <button onClick={() => onChange(value)}>
+              <button onClick={() => handleChange(value)}>
                 {label}
               </button>
             </li>
