@@ -49,7 +49,7 @@ export function getGaugeOption(isDarkModeEnabled: boolean): EChartsCoreOption {
           fontFamily: 'Inter',
           offsetCenter: [0, '-5%'],
           valueAnimation: true,
-          formatter: function (value: any) {
+          formatter: function (value: number) {
             return Math.round(value * 100) + '%';
           },
           color: isDarkModeEnabled ? '#fff' : '#18161A'

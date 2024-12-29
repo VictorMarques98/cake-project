@@ -15,7 +15,7 @@ function CardVestingOverview() {
     <div className={styles.card_vesting_overview}>
       <div className={styles.card_vesting_check}>
         <p className={styles.description}>
-          You've <strong>vested</strong> since last check
+          You have <strong>vested</strong> since last check
         </p>
         <Tag
           icon={<Icon name='arrow-up' />}

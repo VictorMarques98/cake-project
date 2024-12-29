@@ -1,8 +1,7 @@
-import { Card } from '@/components/ui/card'
 import styles from './styles.module.scss'
+import { Card } from '@/components/ui/card'
 import Image from 'next/image'
 import { Text } from '@/components/ui/text'
-import { Button } from '@/components/ui/button'
 import { Icon } from '@/components/icons'
 
 export function CardCalculator() {

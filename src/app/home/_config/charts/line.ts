@@ -1,7 +1,7 @@
-import * as echarts from 'echarts';
-import { EChartsCoreOption } from "echarts";
+import * as echarts from 'echarts'
+import { EChartsCoreOption } from "echarts"
 
-export function getLineChartConfig(isDarkModeEnabled: boolean) {
+export function getLineChartConfig(isDarkModeEnabled: boolean): EChartsCoreOption {
   return {
     title: {
       show: true,
@@ -40,7 +40,7 @@ export function getLineChartConfig(isDarkModeEnabled: boolean) {
       show: true,
       backgroundColor: 'black',
       padding: 8,
-      formatter: function (params: any) {
+      formatter: function (params: { name: string }) {
         return `
         Date: <strong>${params.name}</strong>
         <br />
@@ -100,7 +100,6 @@ export function getLineChartConfig(isDarkModeEnabled: boolean) {
           ])
         },
       },
-
     ]
   }
 }
