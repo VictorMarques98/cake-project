@@ -1,7 +1,7 @@
 "use client"
 
 import styles from './styles.module.scss'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 import { ChildrenProps } from '@/types/react'
 
@@ -11,7 +11,13 @@ type Props = ChildrenProps & {
 }
 
 export function Modal({ children, isOpen, onClose }: Props) {
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+
+    setIsMounted(true);
+
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
@@ -24,7 +30,7 @@ export function Modal({ children, isOpen, onClose }: Props) {
     };
   }, [onClose]);
 
-  if (!isOpen) {
+  if (!isOpen || !isMounted) {
     return null;
   }
 
