@@ -7,7 +7,8 @@ import { Tag } from '@/components/ui/tag'
 import { Icon } from '@/components/icons'
 import { FlipClock } from '@/app/home/_components/ui/flip-clock'
 import { Chart } from '@/app/home/_components/ui/chart'
-import { option as lineChartConfig } from '@/app/home/_config/charts/line'
+import { getLineChartConfig } from '@/app/home/_config/charts/line'
+import { useTheme } from '@/hooks/useTheme'
 
 function CardVestingOverview() {
   return (
@@ -49,6 +50,9 @@ function CardVestingCounter() {
 }
 
 export function CardVesting() {
+  const { isDarkMode } = useTheme();
+  const lineChartConfig = getLineChartConfig(isDarkMode);
+
   return (
     <Card className={styles.card_vesting}>
       <CardHeader title='Vesting' />

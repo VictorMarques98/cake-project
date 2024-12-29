@@ -8,7 +8,8 @@ import { Tag } from '@/components/ui/tag'
 import { Icon } from '@/components/icons'
 import { Text } from '@/components/ui/text'
 import { Chart } from '@/app/home/_components/ui/chart'
-import { option as gaugeChartConfig } from '@/app/home/_config/charts/gauge'
+import { getGaugeOption } from '@/app/home/_config/charts/gauge'
+import { useTheme } from '@/hooks/useTheme'
 
 const options = [
   {
@@ -35,6 +36,8 @@ function HeaderIcon() {
 
 export function CardOverview() {
   const [currentValue, setCurrentValue] = useState<string>('Total');
+  const { isDarkMode } = useTheme();
+  const gaugeChartConfig = getGaugeOption(isDarkMode);
 
   return (
     <Card

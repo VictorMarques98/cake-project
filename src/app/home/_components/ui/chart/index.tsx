@@ -25,7 +25,7 @@ export function Chart({ option, className }: Props) {
       window.removeEventListener('resize', handleResize);
       chartInstance.dispose();
     };
-  }, [chartRef]);
+  }, [chartRef, option]);
 
   return (
     <div
