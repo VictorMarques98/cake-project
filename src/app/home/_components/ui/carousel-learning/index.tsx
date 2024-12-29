@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
-import Image from 'next/image';
-import styles from './styles.module.scss';
-import { Text } from '@/components/ui/text';
+import styles from './styles.module.scss'
+import React, { forwardRef } from 'react'
+import Image from 'next/image'
+import { Text } from '@/components/ui/text'
 
 type Props = {
   cards: Array<{
@@ -19,7 +19,7 @@ export const CarouselLearning = forwardRef<HTMLUListElement, Props>(({ cards }, 
       ref={ref}
     >
       {cards.map(({ category, title, duration, thumbnail }) => (
-        <li key={title}>
+        <li key={`${category}_${title}`}>
           <button
             type="button"
             onClick={() => { }}

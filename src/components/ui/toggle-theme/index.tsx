@@ -12,7 +12,7 @@ export function ToggleTheme() {
         className={styles.toggle_checkbox}
         type='checkbox'
         onClick={toggleTheme}
-        checked={isDarkMode}
+        defaultChecked={isDarkMode}
       />
       <div className={styles.toggle_slot}>
         <div className={styles.sun_icon_wrapper}>

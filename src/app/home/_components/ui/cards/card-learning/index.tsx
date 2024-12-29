@@ -10,19 +10,25 @@ import { Icon } from '@/components/icons'
 const learningCards = [
   {
     category: "Investment",
-    title: "Types of options and how they works",
+    title: "Types of options and how they works 1",
     duration: "2:02",
     thumbnail: "/images/learning_card.webp"
   },
   {
     category: "Investment",
-    title: "Types of options and how they works",
+    title: "Types of options and how they works 2 ",
     duration: "2:02",
     thumbnail: "/images/learning_card.webp"
   },
   {
     category: "Investment",
-    title: "Types of options and how they works",
+    title: "Types of options and how they works 3",
+    duration: "2:02",
+    thumbnail: "/images/learning_card.webp"
+  },
+  {
+    category: "Investment",
+    title: "Types of options and how they works 4",
     duration: "2:02",
     thumbnail: "/images/learning_card.webp"
   }

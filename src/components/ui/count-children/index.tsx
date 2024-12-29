@@ -22,14 +22,11 @@ export function ChildCounter({ children }: ChildrenProps) {
   const totalChildren = countChildren(children);
 
   return (
-    <>
-      {children}
-      {/* <div className={styles.child_counter}>
-        <Text
-          content={`Number of children: ${totalChildren}`}
-          type='span'
-        />
-      </div> */}
-    </>
+    <div className={styles.child_counter}>
+      <Text
+        content={`App number children: ${totalChildren}`}
+        type='span'
+      />
+    </div>
   );
 }
